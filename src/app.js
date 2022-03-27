@@ -1,12 +1,5 @@
-export default function appObject(gamer) {
-  if (gamer.health > 50) {
-    return 'healthy';
-  }
-  if (gamer.health > 15) {
-    return 'wounded';
-  }
-  if (gamer.health <= 15) {
-    return 'critical';
-  }
-  return null;
+export default function appObject(arrGamer) {
+  return arrGamer.sort((a, b) => {
+    return b.health - a.health;
+  });
 }
